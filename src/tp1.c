@@ -9,8 +9,12 @@
 #include <stdlib.h>
 #include "personalio.h"
 
-void showMenu(float a, float l, int k)	//muestra el menu siempre que bandera sea =0
+void showMenu(float a, float l, int k)
 {
+
+
+	//marca donde se vuelve a empezar el menu para facilitar la lectura de datos
+	printf("\n________________________________________________________________________\n________________________________________________________________________\n");
 
 	if (k!=-1){
 		printf("\n1. Ingresar Kilómetros: ( km=%d)\n", k);

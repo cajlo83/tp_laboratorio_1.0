@@ -1,3 +1,4 @@
+
 /*
  ============================================================================
  Name        : TP_1.c
@@ -53,12 +54,10 @@ En el menú deberán aparecer los valores actuales cargados en los vuelos de Latam
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "utn.h"
-#include "personailio.h"
+#include "personalio.h"
+#include "tp1.h"
 
 #define P_BTC 4606954.55
-
-
 
 void main(void) {
 
@@ -122,7 +121,7 @@ void main(void) {
 				forceData(P_BTC);
 			}
 		}
-		printf("\n________________________________________________________________________\n________________________________________________________________________\n"); //imprime fin del bucle
+		//printf("1");
 	}while(menu!=6);
 }
 
