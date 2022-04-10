@@ -59,7 +59,7 @@ En el menú deberán aparecer los valores actuales cargados en los vuelos de Latam
 
 #define P_BTC 4606954.55
 
-void main(void) {
+int main(void) {
 
 	setbuf(stdout, NULL);
 
@@ -123,5 +123,6 @@ void main(void) {
 		}
 		//printf("1");
 	}while(menu!=6);
+	return 1;
 }
 

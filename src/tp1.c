@@ -9,22 +9,21 @@
 #include <stdlib.h>
 #include "personalio.h"
 
-void showMenu(float a, float l, int k)
+void showMenu(float aerolineas, float latam, int kmts)
 {
-
 
 	//marca donde se vuelve a empezar el menu para facilitar la lectura de datos
 	printf("\n________________________________________________________________________\n________________________________________________________________________\n");
 
-	if (k!=-1){
-		printf("\n1. Ingresar Kilómetros: ( km=%d)\n", k);
+	if (kmts!=-1){
+		printf("1. Ingresar Kilómetros: ( km=%d)\n", kmts);
 	}
 	else
-		printf("\n1. Ingresar Kilómetros: ( km=x)\n");
+		printf("1) Ingresar Kilómetros: ( km=x)\n");
 
 
-	if(a!=-1 && l!=-1){
-		printf("\n2. Ingresar Precio de Vuelos: (Aerolíneas=%.2f, Latam=%.2f)\n", a, l);
+	if(aerolineas!=-1 && latam!=-1){
+		printf("\n2. Ingresar Precio de Vuelos: (Aerolíneas=%.2f, Latam=%.2f)\n", aerolineas, latam);
 	}
 	else{
 		printf("\n2. Ingresar Precio de Vuelos: (Aerolíneas=y, Latam=z)\n");
@@ -112,8 +111,18 @@ void showResults(float debitoA, float debitoL, float creditoA, float creditoL, f
 
 }
 
-
+/**
+ *
+ *
+ * Precio del bitcoin@param precioBTC
+ *
+ * Km: 7090
+ * Aerolineas Argentinas: $162965
+ * Latam: $ 159339
+ */
 void forceData(float precioBTC){
+///
+///
 
 		printf("\nopcion 5) Carga forzada de datos:\n");
 
