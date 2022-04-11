@@ -2,7 +2,7 @@
  * utn.c
  *
  *  Created on: 10 abr. 2022
- *      Author: Cajlo
+ *      Author: Carlo Morici
  */
 
 #include <stdio.h>
@@ -15,13 +15,15 @@ void showMenu(float aerolineas, float latam, int kmts)
 	//marca donde se vuelve a empezar el menu para facilitar la lectura de datos
 	printf("\n________________________________________________________________________\n________________________________________________________________________\n");
 
+
+	//verifica si ya se completo la opcion 1 para determinar si debe mostar los kilometros ingresado
 	if (kmts!=-1){
-		printf("1. Ingresar Kilómetros: ( km=%d)\n", kmts);
+	printf("1. Ingresar Kilómetros: ( km=%d)\n", kmts);
 	}
 	else
 		printf("1) Ingresar Kilómetros: ( km=x)\n");
 
-
+	//verifica si ya se completo la opcion 2 para determinar si debe mostar los precios ingresados
 	if(aerolineas!=-1 && latam!=-1){
 		printf("\n2. Ingresar Precio de Vuelos: (Aerolíneas=%.2f, Latam=%.2f)\n", aerolineas, latam);
 	}
@@ -58,7 +60,7 @@ void findResults(float *debitoA, float *debitoL, float *creditoA, float *credito
 	printf("\nopcion 3) Calcular todos los costos:\n");
 
 
-	if (kmts==-1 || latam==-1 || aerolineas==-1 ){		//no entra a la opcion 3 sin haber completado las opciones 1 y 2
+	if (kmts==-1 || latam==-1 || aerolineas==-1 ){		//si los datos siguen en sus valores de inicializacion, entonces no hay nada para calcular
 		printf("aun no ha completado los datos de distancia y precio. Complete dichos datos y reintente\n");
 	}
 	else{
@@ -111,18 +113,9 @@ void showResults(float debitoA, float debitoL, float creditoA, float creditoL, f
 
 }
 
-/**
- *
- *
- * Precio del bitcoin@param precioBTC
- *
- * Km: 7090
- * Aerolineas Argentinas: $162965
- * Latam: $ 159339
- */
+
 void forceData(float precioBTC){
-///
-///
+
 
 		printf("\nopcion 5) Carga forzada de datos:\n");
 

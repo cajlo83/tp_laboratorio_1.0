@@ -2,17 +2,18 @@
  * utn.h
  *
  *  Created on: 10 abr. 2022
- *      Author: Cajlo
+ *      Author: Carlo Morici
  */
 
 #ifndef UTN_H_
 #define UTN_H_
 
-/// Recibe el precio de aerolineas@param aerolineas
-/// Recibe el precio de latam @param latam
-/// Recobe la cantidad de kilometros @param kmts
 ///
-/// Evalua las variables recibidas para decidir como mostrar el menu
+///  Evalua las variables recibidas para decidir como mostrar el menu
+///
+/// @param aerolineas Recibe el precio de aerolineas
+///  @param latam Recibe el precio de latam
+///  @param kmts Recobe la cantidad de kilometros
 ///
 void showMenu(float aerolineas, float latam, int kmts);						//imprime el menu con datos actualizados
 
@@ -21,21 +22,22 @@ void showMenu(float aerolineas, float latam, int kmts);						//imprime el menu c
 
 
 
-/// Precio debito aerolineas@param debitoA
-/// Precio debito latam@param debitoL
-/// precio credito aerolineas@param creditoA
-/// Precio credito latam@param creditoL
-/// Precio bitcoin areolineas@param BTCA
-/// Precio bitcoin latam@param BTCL
-/// Precio Por Unidad aerolineas@param PPUA
-/// Precio Por Unidad latam@param PPUL
-/// Kilometros@param kmts
-/// Precio base latam@param latam
-/// Precio base aerolineas@param aerolineas
-/// Diferencia de precios base de aerolineas y latam@param diferencia
-/// Precio del bitcoin@param precioBTC
 ///
-/// recibe por valor datos iniciales y guarda los resultados en sus respectivas varaibles por referencia
+/// recibe por valor los datos iniciales, hace calculos correspondiente y guarda los resultados en sus respectivas varaibles por referencia
+///
+/// @param debitoA Precio debito aerolineas
+/// @param debitoL Precio debito latam
+/// @param creditoA precio credito aerolineas
+/// @param creditoL Precio credito latam
+/// @param BTCA Precio bitcoin areolineas
+/// @param BTCL Precio bitcoin latam
+/// @param PPUA Precio Por Unidad aerolineas
+/// @param PPUL Precio Por Unidad latam
+/// @param kmts Kilometros
+/// @param latam Precio base latam
+/// @param aerolineas Precio base aerolineas
+/// @param diferencia Diferencia de precios base de aerolineas y latam
+/// @param precioBTC Precio del bitcoin
 ///
 void findResults(float *debitoA, float *debitoL, float *creditoA, float *creditoL, float *BTCA, float *BTCL, float *PPUA, float *PPUL,
 		int kmts, float latam, float aerolineas, float *diferencia, float precioBTC);		//menu 3)hace calculos y guarda los datos por referencia
@@ -44,51 +46,38 @@ void findResults(float *debitoA, float *debitoL, float *creditoA, float *credito
 
 
 
-/// Precio debito aerolineas@param debitoA
-/// Precio debito latam@param debitoL
-/// precio credito aerolineas@param creditoA
-/// Precio credito latam@param creditoL
-/// Precio bitcoin areolineas@param BTCA
-/// Precio bitcoin latam@param BTCL
-/// Precio Por Unidad aerolineas@param PPUA
-/// Precio Por Unidad latam@param PPUL
-/// Kilometros@param kmts
-/// Precio base latam@param latam
-/// Precio base aerolineas@param aerolineas
-/// Diferencia de precios base de aerolineas y latam@param diferencia
-///
-/// muestra los datos calculados por findResults(...)
-///
+
 
 /**
+ * Recibe las variables calculadas e ingresadas para luego mostrarlas en pantalla con el formato correspondiente
  *
- * @param debitoA
- * @param debitoL
- * @param creditoA
- * @param creditoL
- * @param BTCA
- * @param BTCL
- * @param PPUA
- * @param PPUL
- * @param kmts
- * @param latam
- * @param aerolineas
- * @param diferencia
+ * @param debitoA Precio debito aerolineas
+ * @param debitoL Precio debito latam
+ * @param creditoA Precio credito latam
+ * @param creditoL Precio credito latam
+ * @param BTCA Precio bitcoin areolineas
+ * @param BTCL Precio bitcoin latam
+ * @param PPUA Precio Por Unidad aerolineas
+ * @param PPUL Precio Por Unidad latam
+ * @param kmts Kilometros
+ * @param latam Precio base latam
+ * @param aerolineas Precio base aerolineas
+ * @param diferencia Diferencia de precios base de aerolineas y latam
  */
 void showResults(float debitoA, float debitoL, float creditoA, float creditoL, float BTCA, float BTCL, float PPUA, float PPUL,
 		int kmts, float latam, float aerolineas, float diferencia);				//menu4) imprime resultados
 
 
 
-/*
+
 /**
- *
- *
- * Precio del bitcoin@param precioBTC
- *
- * Km: 7090
+ * simula que se ingresaron datos especificos y los muestra. datos:
+ *  Km: 7090
  * Aerolineas Argentinas: $162965
  * Latam: $ 159339
+ *
+ * @param precioBTC Precio del bitcoin
+ *
  */
 void forceData(float precioBTC);
 
