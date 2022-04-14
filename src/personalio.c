@@ -19,10 +19,9 @@ int intVerify(int numero, int minimo, int maximo){
 	if(minimo==1 && maximo==0)
 	{
 		if (numero>0)
-			retornador= 0;			//si minimo=1 y maximo=0 hay que verificar si el numero es positivo
+			retornador= 1;			//si minimo=1 y maximo=0 hay que verificar si el numero es positivo
 		else{
-			printf("\nno ingreso un valor positivo");
-			retornador=1;
+			retornador=0;
 		}
 	}
 
@@ -30,23 +29,19 @@ int intVerify(int numero, int minimo, int maximo){
 	else if(minimo==0 && maximo==-1)
 	{
 		if (numero<0)
-			retornador= 0;			//si minimo=0 y maximo=-1 hay que verificar si el numero es negativo
+			retornador= 1;			//si minimo=0 y maximo=-1 hay que verificar si el numero es negativo
 		else{
-			printf("\nno ingreso un valor negativo");
-			retornador=1;
+			retornador=0;
 		}
 	}
 
 	else if( minimo<=numero && numero<=maximo )		//verifica que el numero este en el intervalo dado
 	{
-		retornador= 0;
-
-
+		retornador= 1;
 	}
 	else
 	{
-		printf("\nno ingreso valores segun lo esperado.");
-		retornador =1;				//anuncia que el valor no esta en el intervalo dado y retorna 1
+		retornador =0;				//anuncia que el valor no esta en el intervalo dado y retorna 1
 
 	}
 
@@ -62,10 +57,9 @@ int floatVerify(float numero, int minimo, int maximo){
 	if(minimo==1 && maximo==0)
 	{
 		if (numero>0)
-			retornador= 0;			//si minimo=1 y maximo=0 hay que verificar si el numero es positivo
+			retornador= 1;			//si minimo=1 y maximo=0 hay que verificar si el numero es positivo
 		else{
-			printf("\nno ingreso un valor positivo");
-			retornador=1;
+			retornador=0;
 		}
 	}
 
@@ -73,23 +67,22 @@ int floatVerify(float numero, int minimo, int maximo){
 	else if(minimo==0 && maximo==-1)
 	{
 		if (numero<0)
-			retornador= 0;			//si minimo=0 y maximo=-1 hay que verificar si el numero es negativo
+			retornador= 1;			//si minimo=0 y maximo=-1 hay que verificar si el numero es negativo
 		else{
-			printf("\nno ingreso un valor negativo");
-			retornador=1;
+			retornador=0;
 		}
 	}
 
 	else if( minimo<=numero && numero<=maximo )		//verifica que el numero este en el intervalo dado
 	{
-		retornador= 0;
+		retornador= 1;
 
 
 	}
 	else
 	{
-		printf("\nno ingreso valores segun lo esperado.");
-		retornador =1;				//anuncia que el valor no esta en el intervalo dado y retorna 1
+
+		retornador =0;				//anuncia que el valor no esta en el intervalo dado y retorna 1
 
 	}
 

@@ -8,17 +8,64 @@
 #ifndef PERSONALIO_H_
 #define PERSONALIO_H_
 
-void esperar(char *mensaje);									// muestra un mensaje y luego pausa el programa esperando que presiones una tecla en el teclado
+/**
+ * muestra un mensaje y luego pausa el programa esperando que presiones una tecla en el teclado
+ *
+ * @param mensaje
+ */
+void esperar(char *mensaje);
 
-int intVerify(int numero, int minimo, int maximo); 			//devuelve 1 o 0 a un banderin para determinar si debe continuar un bucle
+/**
+ * verifica si un numero entero esta en un rango especifico, o si es menor o mayor que 0. retorna 1 en caso de verdadedor o0 en caso de falso
+ * minimo=0 y maximo=-1 : verifica si el numero es negativo
+ * minimo=1 y maximo=0 : verifica si el numero es positivo
+ *
+ * @param numero valor a evaluar
+ * @param minimo valor minimo
+ * @param maximo valor maximo
+ * @return retorna verdadero o falso segun lo planteado con los argumentos
+ */
+int intVerify(int numero, int minimo, int maximo);
 
-int floatVerify(float numero, int minimo, int maximo);		//devuelve 1 o 0 a un banderin para determinar si debe continuar un bucle
 
+/**
+ * verifica si un numero flotante esta en un rango especifico, o si es menor o mayor que 0. retorna 1 en caso de verdadedor o0 en caso de falso
+ * minimo=0 y maximo=-1 : verifica si el numero es negativo
+ * minimo=1 y maximo=0 : verifica si el numero es positivo
+ *
+ * @param numero valor a evaluar
+ * @param minimo valor minimo
+ * @param maximo valor maximo
+ * @return retorna verdadero o falso segun lo planteado con los argumentos
+ */
+int floatVerify(float numero, int minimo, int maximo);
+
+
+/**
+ * muestra un mensaje y queda a la espera para scannear un entero
+ * @param mensaje
+ * @return retorna el valor escaneado
+ */
 int intScan(char *mensaje);
 
+
+/**
+ * muestra un mensaje y queda a la espera para scannear un entero
+ * @param mensaje
+ * @return retorna el valor escaneado
+ */
 int floatScan(char *mensaje);
 
-float basicMath(float a, float b, char operacion);			//hace operaciones aritmeticas segun se ingrese los caracteres '*', '/', '+', '-', '%
+
+/**
+ * hace operaciones aritmeticas segun se ingrese los caracteres '*', '/', '+', '-', '%
+ *
+ * @param a
+ * @param b
+ * @param operacion espera los caracteres '*', '/', '+', '-', '%' para decidir la operacion
+ * @return retorna el resultado
+ */
+float basicMath(float a, float b, char operacion);			//hace operaciones aritmeticas segun se ingrese los caracteres '*', '/', '+', '-', '%'
 
 
 

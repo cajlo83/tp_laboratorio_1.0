@@ -84,25 +84,25 @@ int main(void) {
 
 		do{
 			menu=intScan("\ningrese una opcion del 1 al 6 para proceder: ");
-		}while(intVerify(menu, 1, 6));
+		}while(!intVerify(menu, 1, 6));
 
 		switch (menu){		//swtich-case que controla las opciones del menu
 			case 1:
 			{
 				do{
 					kmts=intScan("\ningrese los kilometros del recorrido (entre 70 y 16700): ");		//las rutas de vuelo mas corta y mas larga del planeta respectivamente segun google.
-				}while(intVerify(kmts, 70, 16700));
+				}while(!intVerify(kmts, 70, 16700));
 				break;
 			}
 			case 2:
 			{
 				do{
 					aerolineas=floatScan("\ningrese el precio de aerolineas: ");
-				}while(floatVerify(aerolineas, 1, 0));	//precios positivos
+				}while(!floatVerify(aerolineas, 1, 0));	//precios positivos
 
 				do{
 					latam=floatScan("\ningrese el precio de latam: ");
-				}while(floatVerify(latam, 1, 0));		//precios deben ser positivos
+				}while(!floatVerify(latam, 1, 0));		//precios deben ser positivos
 
 				break;
 			}
