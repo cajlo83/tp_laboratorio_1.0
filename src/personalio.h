@@ -8,6 +8,7 @@
 #ifndef PERSONALIO_H_
 #define PERSONALIO_H_
 
+void esperar(char *mensaje);									// muestra un mensaje y luego pausa el programa esperando que presiones una tecla en el teclado
 
 int intVerify(int numero, int minimo, int maximo); 			//devuelve 1 o 0 a un banderin para determinar si debe continuar un bucle
 

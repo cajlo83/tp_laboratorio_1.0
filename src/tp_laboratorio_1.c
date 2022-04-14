@@ -57,19 +57,18 @@ En el menú deberán aparecer los valores actuales cargados en los vuelos de Latam
 #include "personalio.h"
 #include "tp1.h"
 
-#define P_BTC 4606954.55
+#define P_BTC 4606954.55	//se controla el precio del BTC por medio de un define por su naturaleza cambiaria
 
 int main(void) {
-
 	setbuf(stdout, NULL);
 
-	int kmts=-1;
-	float aerolineas=-1;		//inician en -1 para luego verificar si ya se hizo la carga de datos
-	float latam=-1;
+	int menu=-1;				//
+	int kmts=-1;				//
+	float aerolineas=-1;		//inician en -1 para hacer verificaciones posteriores
+	float latam=-1;				//
+	float debitoA=-1;			//
 
-	int menu;
 
-	float debitoA=-1;	//inicia en -1 para luego verificar si ya se hizo el calculo de datos
 	float debitoL;
 	float creditoA;
 	float creditoL;
@@ -81,13 +80,13 @@ int main(void) {
 
 	do
 	{
-		showMenu(aerolineas, latam, kmts);
+		showMenu(menu, aerolineas, latam, kmts, P_BTC);		//muestra distintos datos en el menu segun los datos ingresados
 
 		do{
 			menu=intScan("\ningrese una opcion del 1 al 6 para proceder: ");
 		}while(intVerify(menu, 1, 6));
 
-		switch (menu){
+		switch (menu){		//swtich-case que controla las opciones del menu
 			case 1:
 			{
 				do{
@@ -102,7 +101,7 @@ int main(void) {
 				}while(floatVerify(aerolineas, 1, 0));	//precios positivos
 
 				do{
-					latam=floatScan("\ningrese el precio de latam");
+					latam=floatScan("\ningrese el precio de latam: ");
 				}while(floatVerify(latam, 1, 0));		//precios deben ser positivos
 
 				break;

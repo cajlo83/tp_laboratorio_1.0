@@ -15,7 +15,7 @@
 ///  @param latam Recibe el precio de latam
 ///  @param kmts Recobe la cantidad de kilometros
 ///
-void showMenu(float aerolineas, float latam, int kmts);						//imprime el menu con datos actualizados
+void showMenu(int menu, float aerolineas, float latam, int kmts, float precioBTC);						//imprime el menu con datos actualizados
 
 
 

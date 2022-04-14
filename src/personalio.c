@@ -134,3 +134,12 @@ int floatScan(char *mensaje){
 	return a;
 
 }
+
+void esperar(char *mensaje){
+
+	printf("%s", mensaje);
+	fflush(stdin);
+	getchar();
+
+}
+
